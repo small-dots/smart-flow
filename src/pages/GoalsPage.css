@@ -1,0 +1,190 @@
+.annual-goal-section {
+  margin-bottom: 32px;
+}
+
+.annual-goal-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-pixel);
+}
+
+.annual-goal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+}
+
+.annual-goal-color-bar {
+  width: 4px;
+  height: 48px;
+  border-radius: 0;
+  background: var(--goal-color, var(--brand-indigo));
+  flex-shrink: 0;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.4);
+}
+
+.annual-goal-info {
+  flex: 1;
+}
+
+.annual-goal-year {
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: var(--text-quaternary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.annual-goal-title {
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.annual-goal-measurable {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.annual-goal-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.annual-goal-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-pct {
+  font-family: var(--font-pixel);
+  font-size: 22px;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 4px;
+}
+
+/* Monthly grid */
+.monthly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.monthly-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow-pixel);
+}
+
+.monthly-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.monthly-month {
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  color: var(--accent-hover);
+  background: rgba(94, 106, 210, 0.12);
+  padding: 2px 6px;
+  border-radius: 0;
+  border: 1px solid rgba(94, 106, 210, 0.3);
+}
+
+.monthly-title {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.monthly-measurable {
+  font-size: 12px;
+  color: var(--text-quaternary);
+  line-height: 1.4;
+}
+
+.monthly-pct {
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: var(--text-quaternary);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.empty-monthly {
+  padding: 12px;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-monthly-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 0;
+  background: none;
+  color: var(--text-quaternary);
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.1s steps(2);
+}
+
+.add-monthly-btn:hover {
+  border-color: var(--border-standard);
+  color: var(--text-tertiary);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow-pixel);
+}
+
+/* Color picker */
+.color-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.1s steps(2);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.color-dot.selected {
+  border-color: white;
+  box-shadow:
+    0 0 0 1px white,
+    2px 2px 0 rgba(0, 0, 0, 0.4);
+}

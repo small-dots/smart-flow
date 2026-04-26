@@ -1,0 +1,118 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  height: var(--header-height);
+  border-bottom: 1px solid var(--border-solid);
+  background-color: var(--bg-panel);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 3px
+  );
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  flex-shrink: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+.header-left {
+  flex: 0 0 auto;
+}
+.header-title {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+/* Pixel blinking cursor after title */
+.header-title::after {
+  content: "_";
+  color: var(--accent-violet);
+  animation: blink 1s steps(1) infinite;
+  margin-left: 2px;
+}
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.water-level-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  border: 1px solid var(--border-solid);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow-pixel-inset);
+}
+.water-level-normal .water-level-fill {
+  background: var(--brand-indigo);
+}
+.water-level-orange .water-level-fill {
+  background: var(--status-orange);
+}
+.water-level-red .water-level-fill {
+  background: var(--status-red);
+}
+.water-level-orange {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+.water-level-red {
+  border-color: rgba(239, 68, 68, 0.4);
+  animation: pulse 1.5s steps(2) infinite;
+}
+.water-level-bar {
+  width: 80px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.water-level-fill {
+  height: 100%;
+  border-radius: 0;
+  transition: width 0.4s steps(10);
+}
+.water-level-text {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  color: var(--text-tertiary);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+.time-display {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  color: var(--accent-violet);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px rgba(113, 112, 255, 0.3);
+}
+.date-display {
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  color: var(--text-quaternary);
+  letter-spacing: 0.5px;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

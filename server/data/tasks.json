@@ -1,0 +1,153 @@
+{
+  "tasks": [
+    {
+      "id": "task_1",
+      "track": "work",
+      "specific": "编写4D轨迹引擎设计方案",
+      "measurable": "完成10页技术文档并提交代码库",
+      "relevantGoalId": "annual_1",
+      "relevantMonthlyId": "monthly_1",
+      "startTime": "2026-04-26T09:00:00.000Z",
+      "endTime": "2026-04-26T11:00:00.000Z",
+      "estimatedHours": 2,
+      "actualHours": null,
+      "status": "completed",
+      "priority": "high",
+      "pScore": {
+        "relevance": 9,
+        "urgency": 8,
+        "energyLevel": "high"
+      },
+      "tags": [
+        "架构",
+        "文档"
+      ],
+      "createdAt": "2026-04-23T20:00:00.000Z",
+      "completedAt": "2026-04-26T12:31:21.089Z"
+    },
+    {
+      "id": "task_2",
+      "track": "work",
+      "specific": "代码评审 - 用户认证模块",
+      "measurable": "评审完PR#234并给出至少3条改进意见",
+      "relevantGoalId": "annual_1",
+      "relevantMonthlyId": "monthly_1",
+      "startTime": "2026-04-26T11:00:00.000Z",
+      "endTime": "2026-04-26T12:00:00.000Z",
+      "estimatedHours": 1,
+      "actualHours": null,
+      "status": "completed",
+      "priority": "medium",
+      "pScore": {
+        "relevance": 7,
+        "urgency": 6,
+        "energyLevel": "medium"
+      },
+      "tags": [
+        "代码评审"
+      ],
+      "createdAt": "2026-04-23T20:00:00.000Z",
+      "completedAt": "2026-04-26T12:31:23.777Z"
+    },
+    {
+      "id": "task_3",
+      "track": "life",
+      "specific": "晨跑5公里",
+      "measurable": "完成5公里跑步，配速在6分/公里内",
+      "relevantGoalId": "annual_2",
+      "relevantMonthlyId": "monthly_2",
+      "startTime": "2026-04-26T07:00:00.000Z",
+      "endTime": "2026-04-26T07:30:00.000Z",
+      "estimatedHours": 0.5,
+      "actualHours": null,
+      "status": "completed",
+      "priority": "medium",
+      "pScore": {
+        "relevance": 8,
+        "urgency": 5,
+        "energyLevel": "medium"
+      },
+      "tags": [
+        "健身",
+        "跑步"
+      ],
+      "createdAt": "2026-04-23T20:00:00.000Z",
+      "completedAt": "2026-04-26T07:28:00.000Z"
+    },
+    {
+      "id": "task_4",
+      "track": "work",
+      "specific": "与产品团队对齐Q2路线图",
+      "measurable": "完成会议纪要并确定5个关键里程碑",
+      "relevantGoalId": "annual_1",
+      "relevantMonthlyId": "monthly_1",
+      "startTime": "2026-04-26T14:00:00.000Z",
+      "endTime": "2026-04-26T15:30:00.000Z",
+      "estimatedHours": 1.5,
+      "actualHours": null,
+      "status": "completed",
+      "priority": "high",
+      "pScore": {
+        "relevance": 8,
+        "urgency": 9,
+        "energyLevel": "medium"
+      },
+      "tags": [
+        "会议",
+        "规划"
+      ],
+      "createdAt": "2026-04-23T20:00:00.000Z",
+      "completedAt": "2026-04-26T12:31:23.194Z"
+    },
+    {
+      "id": "task_5",
+      "track": "life",
+      "specific": "阅读《架构整洁之道》",
+      "measurable": "读完第7-10章并记录笔记",
+      "relevantGoalId": "annual_1",
+      "relevantMonthlyId": "monthly_1",
+      "startTime": "2026-04-26T21:00:00.000Z",
+      "endTime": "2026-04-26T22:00:00.000Z",
+      "estimatedHours": 1,
+      "actualHours": null,
+      "status": "pending",
+      "priority": "medium",
+      "pScore": {
+        "relevance": 7,
+        "urgency": 4,
+        "energyLevel": "low"
+      },
+      "tags": [
+        "阅读",
+        "学习"
+      ],
+      "createdAt": "2026-04-23T20:00:00.000Z",
+      "completedAt": null
+    },
+    {
+      "id": "task_6",
+      "track": "work",
+      "specific": "修复生产环境内存泄漏问题",
+      "measurable": "找到根因并部署修复，内存使用降至正常水位",
+      "relevantGoalId": "annual_1",
+      "relevantMonthlyId": "monthly_1",
+      "startTime": "2026-04-26T15:30:00.000Z",
+      "endTime": "2026-04-26T17:30:00.000Z",
+      "estimatedHours": 2,
+      "actualHours": null,
+      "status": "completed",
+      "priority": "urgent",
+      "pScore": {
+        "relevance": 6,
+        "urgency": 10,
+        "energyLevel": "high"
+      },
+      "tags": [
+        "Bug修复",
+        "紧急"
+      ],
+      "createdAt": "2026-04-24T08:00:00.000Z",
+      "completedAt": "2026-04-26T12:31:18.756Z"
+    }
+  ]
+}

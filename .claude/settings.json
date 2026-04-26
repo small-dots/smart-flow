@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create vite@latest . -- --template react)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(nvm ls)",
+      "Bash(export NVM_DIR=\"$HOME/.nvm\")",
+      "Bash(source \"$NVM_DIR/nvm.sh\")",
+      "Bash(nvm use 20)",
+      "Bash(nvm use 22)",
+      "Bash(/Users/anzhongqi/.nvm/versions/node/v22.15.0/bin/node --version)",
+      "Bash(/Users/anzhongqi/.nvm/versions/node/v22.15.0/bin/npm --version)",
+      "Bash(PATH=\"/Users/anzhongqi/.nvm/versions/node/v22.15.0/bin:$PATH\" node --version)",
+      "Bash(PATH=\"/Users/anzhongqi/.nvm/versions/node/v22.15.0/bin:$PATH\" npm create vite@latest . -- --template react --force)",
+      "Bash(PATH=\"/Users/anzhongqi/.nvm/versions/node/v22.15.0/bin:$PATH\" npm create vite@latest . -- --template react 2)",
+      "Bash(PATH=\"/Users/anzhongqi/.nvm/versions/node/v22.15.0/bin:$PATH\" npm install)"
+    ]
+  }
+}

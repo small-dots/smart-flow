@@ -1,0 +1,24 @@
+{
+  "productiveHours": {
+    "start": "09:30",
+    "end": "11:30"
+  },
+  "workHours": {
+    "start": "09:00",
+    "end": "18:30"
+  },
+  "workEndTime": "17:30",
+  "maxDailyWorkHours": 8,
+  "warningThresholdHours": 6,
+  "maxDailyHours": 16,
+  "pomodoroMinutes": 25,
+  "breakMinutes": 5,
+  "theme": "dark",
+  "defaultView": "daily",
+  "userName": "用户",
+  "notifications": {
+    "workEndReminder": true,
+    "latestStartReminder": true,
+    "waterLevelWarning": true
+  }
+}
