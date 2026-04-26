@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { api } from '../utils/api'
 import { getMonthName } from '../utils/helpers'
 import Header from '../components/Layout/Header'
+import { useToast } from '../components/UI/ToastManager'
 import './GoalsPage.css'
 
 const GOAL_COLORS = ['#5e6ad2', '#27a644', '#f59e0b', '#ef4444', '#10b981', '#3b82f6']

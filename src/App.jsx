@@ -7,6 +7,7 @@ import GanttView from './pages/GanttView'
 import KanbanView from './pages/KanbanView'
 import CalendarView from './pages/CalendarView'
 import SettingsPage from './pages/SettingsPage'
+import ReminderPanel from './components/UI/ReminderPanel'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/calendar" element={<CalendarView />} />
         <Route path="/settings" element={<SettingsPage />} />
       </Routes>
+      <ReminderPanel />
     </div>
   )
 }

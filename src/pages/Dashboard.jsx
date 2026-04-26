@@ -4,9 +4,11 @@ import { formatDuration, getPScoreColor, getWaterLevelClass, formatDate, getDayC
 import Header from '../components/Layout/Header'
 import TaskCard from '../components/Tasks/TaskCard'
 import SmartTaskModal from '../components/Tasks/SmartTaskModal'
+import { useToast } from '../components/UI/ToastManager'
 import './Dashboard.css'
 
 export default function Dashboard() {
+  const { confirm } = useToast()
   const [data, setData] = useState(null)
   const [goals, setGoals] = useState({ annual: [], monthly: [] })
   const [loading, setLoading] = useState(true)

@@ -3,6 +3,7 @@ import { api } from '../utils/api'
 import { formatTime, formatDuration, getTrackConfig, getPScoreColor } from '../utils/helpers'
 import Header from '../components/Layout/Header'
 import SmartTaskModal from '../components/Tasks/SmartTaskModal'
+import { useToast } from '../components/UI/ToastManager'
 import './KanbanView.css'
 
 const COLUMNS = [

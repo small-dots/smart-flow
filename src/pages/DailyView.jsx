@@ -4,6 +4,7 @@ import { todayStr, formatTime, formatDuration, getTrackConfig } from '../utils/h
 import Header from '../components/Layout/Header'
 import TaskCard from '../components/Tasks/TaskCard'
 import SmartTaskModal from '../components/Tasks/SmartTaskModal'
+import { useToast } from '../components/UI/ToastManager'
 import './DailyView.css'
 
 // Hours to show in timeline (6am - 11pm)

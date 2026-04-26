@@ -1,26 +1,5 @@
 {
-  "annual": [
-    {
-      "id": "annual_1",
-      "year": 2026,
-      "title": "架构师晋升",
-      "measurable": "通过公司架构师认证考核",
-      "description": "从高级工程师晋升至架构师级别",
-      "progress": 25,
-      "color": "#5e6ad2",
-      "createdAt": "2026-01-01T00:00:00.000Z"
-    },
-    {
-      "id": "annual_2",
-      "year": 2026,
-      "title": "健康体脂目标",
-      "measurable": "体脂率从25%降至20%",
-      "description": "通过规律健身和饮食控制改善体型",
-      "progress": 40,
-      "color": "#27a644",
-      "createdAt": "2026-01-01T00:00:00.000Z"
-    }
-  ],
+  "annual": [],
   "monthly": [
     {
       "id": "monthly_1",
