@@ -61,6 +61,7 @@ function KanbanCard({ task, goals, onEdit, onStatusChange }) {
 }
 
 export default function KanbanView() {
+  const { show, confirm } = useToast()
   const [tasks, setTasks] = useState([])
   const [goals, setGoals] = useState({ annual: [], monthly: [] })
   const [loading, setLoading] = useState(true)
@@ -87,8 +88,9 @@ export default function KanbanView() {
   }
 
   async function handleDelete(id) {
-    if (!confirm('确认删除？')) return
+    if (!(await confirm('确认删除此任务？', '此操作不可撤销'))) return
     await api.deleteTask(id)
+    show('任务已删除', 'success')
     load()
   }
 

@@ -32,9 +32,11 @@ export function formatDuration(hours) {
   return `${hours.toFixed(1)}h`
 }
 
-// Today's date string
+// Today's date string (local time, not UTC)
 export function todayStr() {
-  return new Date().toISOString().split('T')[0]
+  const d = new Date()
+  const pad = n => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
 }
 
 // Week dates starting from Monday
@@ -44,11 +46,12 @@ export function getWeekDates(offset = 0) {
   const monday = new Date(now)
   monday.setDate(monday.getDate() - day + 1 + offset * 7)
 
+  const pad = n => String(n).padStart(2, '0')
   const dates = []
   for (let i = 0; i < 7; i++) {
     const d = new Date(monday)
     d.setDate(d.getDate() + i)
-    dates.push(d.toISOString().split('T')[0])
+    dates.push(`${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`)
   }
   return dates
 }

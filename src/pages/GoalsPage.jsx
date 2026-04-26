@@ -155,6 +155,7 @@ function GoalModal({ type, onClose, onSaved, annualGoals = [], editData = null }
 }
 
 export default function GoalsPage() {
+  const { show, confirm } = useToast()
   const [goals, setGoals] = useState({ annual: [], monthly: [] })
   const [loading, setLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
@@ -176,9 +177,10 @@ export default function GoalsPage() {
   function openEdit(data, type) { setEditData(data); setModalType(type); setShowModal(true) }
 
   async function handleDelete(id, type) {
-    if (!confirm('确认删除？')) return
+    if (!(await confirm('确认删除此目标？', '此操作不可撤销'))) return
     if (type === 'annual') await api.deleteAnnualGoal(id)
     else await api.deleteMonthlyGoal(id)
+    show('目标已删除', 'success')
     load()
   }
 

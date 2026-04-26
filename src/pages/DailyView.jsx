@@ -42,6 +42,7 @@ function TimelineSlot({ hour, tasks, goals, onComplete, onEdit, onDelete }) {
 }
 
 export default function DailyView() {
+  const { show, confirm } = useToast()
   const [date, setDate] = useState(todayStr())
   const [tasksData, setTasksData] = useState({ tasks: [], conflicts: [], waterLevel: null })
   const [goals, setGoals] = useState({ annual: [], monthly: [] })
@@ -73,8 +74,9 @@ export default function DailyView() {
   }
 
   async function handleDelete(id) {
-    if (!confirm('确认删除此任务？')) return
+    if (!(await confirm('确认删除此任务？', '此操作不可撤销'))) return
     await api.deleteTask(id)
+    show('任务已删除', 'success')
     load()
   }
 

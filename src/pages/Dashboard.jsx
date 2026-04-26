@@ -8,7 +8,7 @@ import { useToast } from '../components/UI/ToastManager'
 import './Dashboard.css'
 
 export default function Dashboard() {
-  const { confirm } = useToast()
+  const { show, confirm } = useToast()
   const [data, setData] = useState(null)
   const [goals, setGoals] = useState({ annual: [], monthly: [] })
   const [loading, setLoading] = useState(true)
@@ -34,8 +34,9 @@ export default function Dashboard() {
   }
 
   async function handleDelete(id) {
-    if (!confirm('确认删除此任务？')) return
+    if (!(await confirm('确认删除此任务？', '此操作不可撤销'))) return
     await api.deleteTask(id)
+    show('任务已删除', 'success')
     load()
   }
 

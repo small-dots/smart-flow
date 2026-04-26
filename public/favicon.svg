@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" shape-rendering="crispEdges">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#0f1011"/>
+
+  <!-- Top brand border -->
+  <rect x="0" y="0" width="32" height="2" fill="#5e6ad2"/>
+
+  <!-- Left accent line -->
+  <rect x="0" y="2" width="2" height="28" fill="#5e6ad2" opacity="0.3"/>
+
+  <!-- Gantt bar 1: work track (full, completed) -->
+  <rect x="4" y="7" width="18" height="4" fill="#5e6ad2"/>
+  <!-- Done pixel marker -->
+  <rect x="23" y="7" width="5" height="4" fill="#10b981"/>
+  <!-- Check pixel inside done marker -->
+  <rect x="24" y="8" width="3" height="2" fill="#0f1011" opacity="0.5"/>
+
+  <!-- Gantt bar 2: life track (in progress) -->
+  <rect x="4" y="14" width="13" height="4" fill="#7170ff"/>
+  <rect x="17" y="14" width="11" height="4" fill="rgba(113,112,255,0.15)"/>
+
+  <!-- Gantt bar 3: upcoming (dim) -->
+  <rect x="4" y="21" width="8" height="4" fill="rgba(94,106,210,0.45)"/>
+  <rect x="12" y="21" width="16" height="4" fill="rgba(94,106,210,0.1)"/>
+
+  <!-- Bottom pixel decoration -->
+  <rect x="28" y="29" width="2" height="2" fill="#7170ff" opacity="0.6"/>
+  <rect x="24" y="29" width="2" height="2" fill="#5e6ad2" opacity="0.4"/>
+</svg>

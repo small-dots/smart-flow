@@ -14,6 +14,20 @@ function getFirstDayOfMonth(year, month) {
   return d === 0 ? 7 : d // Mon=1, Sun=7
 }
 
+// Period cut: every 28 days, reference April 16 2026
+const PERIOD_REF = new Date(2026, 3, 16)
+
+function getPeriodCutDays(year, month) {
+  const days = getDaysInMonth(year, month)
+  const result = []
+  for (let d = 1; d <= days; d++) {
+    const date = new Date(year, month - 1, d)
+    const diffDays = Math.round((date - PERIOD_REF) / 86400000)
+    if (diffDays % 28 === 0) result.push(d)
+  }
+  return result
+}
+
 export default function CalendarView() {
   const now = new Date()
   const [year, setYear] = useState(now.getFullYear())
@@ -49,6 +63,7 @@ export default function CalendarView() {
   const daysInMonth = getDaysInMonth(year, month)
   const firstDay = getFirstDayOfMonth(year, month) // 1=Mon
   const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+  const periodCutDays = getPeriodCutDays(year, month)
 
   // Build calendar grid
   const cells = []
@@ -108,6 +123,7 @@ export default function CalendarView() {
                 const dayTasks = getTasksForDay(day)
                 const isToday = dateStr === today
                 const isSelected = dateStr === selectedDate
+                const isPeriodCut = periodCutDays.includes(day)
                 const workCount = dayTasks.filter(t => t.track === 'work').length
                 const lifeCount = dayTasks.filter(t => t.track === 'life').length
                 const totalHours = dayTasks.reduce((s, t) => s + (t.estimatedHours || 0), 0)
@@ -115,10 +131,13 @@ export default function CalendarView() {
                 return (
                   <div
                     key={day}
-                    className={`cal-cell ${isToday ? 'cal-today' : ''} ${isSelected ? 'cal-selected' : ''} ${dayTasks.length > 0 ? 'has-tasks' : ''}`}
+                    className={`cal-cell ${isToday ? 'cal-today' : ''} ${isSelected ? 'cal-selected' : ''} ${dayTasks.length > 0 ? 'has-tasks' : ''} ${isPeriodCut ? 'cal-period-cut' : ''}`}
                     onClick={() => setSelectedDate(isSelected ? null : dateStr)}
+                    title={isPeriodCut ? '切期数日（每28天）' : undefined}
                   >
                     <div className="cal-day-num">{day}</div>
+
+                    {isPeriodCut && <div className="cal-period-badge">切期</div>}
 
                     {dayTasks.length > 0 && (
                       <div className="cal-task-dots">
@@ -148,6 +167,12 @@ export default function CalendarView() {
                   <span className="cal-detail-date">{selectedDate}</span>
                   <button className="btn btn-primary btn-sm" onClick={() => setShowModal(true)}>+ 添加</button>
                 </div>
+                {periodCutDays.includes(parseInt(selectedDate.split('-')[2])) && (
+                  <div className="cal-period-cut-notice">
+                    <span className="cal-period-cut-icon">[CUT]</span>
+                    切期数日 — 每28天一次
+                  </div>
+                )}
                 <div className="cal-detail-tasks">
                   {selectedTasks.length === 0 ? (
                     <div className="empty-state">
