@@ -5,10 +5,10 @@ import Header from '../components/Layout/Header'
 import SmartTaskModal from '../components/Tasks/SmartTaskModal'
 import './GanttView.css'
 
-const HOUR_WIDTH = 64 // px per hour
-const ROW_HEIGHT = 48 // px per row
-const DAY_START = 6  // 6am
-const DAY_END = 23   // 11pm
+const HOUR_WIDTH = 100 // px per hour
+const ROW_HEIGHT = 72  // px per row
+const DAY_START = 6   // 6am
+const DAY_END = 23    // 11pm
 const TOTAL_HOURS = DAY_END - DAY_START
 
 function getTaskPosition(task) {
@@ -31,14 +31,14 @@ function GanttBar({ task, rowIndex, onEdit, isConflict }) {
       style={{
         left: `${left}px`,
         width: `${width}px`,
-        top: `${rowIndex * ROW_HEIGHT + 8}px`
+        top: `${rowIndex * ROW_HEIGHT + 12}px`
       }}
       onClick={() => onEdit?.(task)}
       title={`${task.specific} (${formatTime(task.startTime)}–${formatTime(task.endTime)})`}
     >
       <span className="gantt-bar-label">{task.specific}</span>
-      {width > 80 && (
-        <span className="gantt-bar-time">{formatTime(task.startTime)}</span>
+      {width > 120 && (
+        <span className="gantt-bar-time">{formatTime(task.startTime)}–{formatTime(task.endTime)}</span>
       )}
     </div>
   )
